@@ -1,0 +1,91 @@
+:root {
+    box-sizing: border-box;
+    }
+    
+    * {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    }
+
+@font-face {
+    font-family: 'Wandering Pencil DEMO';
+    src: url(/fonts/Wandering\ Pencil.otf);
+}
+.gallery {
+    display: table;
+    margin: 0px auto;
+    background-color: rgba(228, 226, 253, 0.781); 
+    border-spacing: 2em; 
+    
+}
+
+.col {
+    display: table-cell;
+    width: 30%;
+    height: 30%;
+    /* border: 1px solid black;  */
+    vertical-align: top;
+    
+    
+}
+
+img {
+   width: 100%;
+     
+}
+
+.pic {
+    height: 100%;
+    padding: .4em .4em .2em .4em;
+    margin: 1em 0px;
+    border: 1px solid rgb(219, 214, 214);
+    background-color: #fff; 
+    
+}
+
+
+
+a {
+    text-decoration: none;
+    
+}
+
+figcaption {
+    display: block;
+    text-align: center;  
+    font-family: 'Wandering Pencil DEMO'; 
+    font-size: 2em;
+    color: black;
+    text-shadow: 4px 5px 4px #0ac2c2;
+}
+.col:first-child>.pic:first-child,
+.col:last-child>.pic:nth-child(2){
+    filter: blur(7px) brightness(1) contrast(1.1) grayscale(0.1) hue-rotate(0deg) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(3px 3px 5px #000);
+}
+.col:first-child>.pic:last-child,
+.col:last-child>.pic:first-child,
+.col:nth-child(2)>.pic:nth-child(3) {
+    filter: blur(1px) brightness(1.2) contrast(1.2) grayscale(0.67) hue-rotate(98deg) invert(0.92) opacity(57%) saturate(6.8) sepia(0.68) drop-shadow(4px 4px 5px #000);
+}
+.col:first-child>.pic:nth-child(2),
+.col:nth-child(2)>.pic:last-child {
+    filter: blur(0px) brightness(1.1) contrast(10) grayscale(0.1) hue-rotate(0deg) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(3px 3px 5px #000);
+}
+.col:first-child>.pic:nth-child(3),
+.col:last-child>.pic:nth-child(3){
+    filter: blur(0px) brightness(1.1) contrast(1.2) grayscale(1) hue-rotate(0deg) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(3px 3px 5px #000);
+}
+.col:nth-child(2)>.pic:first-child,
+.col:last-child>.pic:last-child {
+    filter: blur(0px) brightness(1.1) contrast(1.2) grayscale(0.1) hue-rotate(238deg) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(3px 3px 5px #000);
+}
+.col:nth-child(2)>.pic:nth-child(2) {
+    filter: blur(0px) brightness(1.1) contrast(1.2) grayscale(0.1) hue-rotate(238deg) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(3px 3px 5px #000);
+}
+
+
+.gallery>.col>.pic:hover {
+    filter: none;
+    transition: all 1s;
+}
